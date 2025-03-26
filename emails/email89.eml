@@ -1,0 +1,210 @@
+Received: from PH8PR19MB7024.namprd19.prod.outlook.com (2603:10b6:510:224::10)
+ by BN8PR19MB2851.namprd19.prod.outlook.com with HTTPS; Mon, 24 Mar 2025
+ 12:07:00 +0000
+Received: from BY5PR16CA0026.namprd16.prod.outlook.com (2603:10b6:a03:1a0::39)
+ by PH8PR19MB7024.namprd19.prod.outlook.com (2603:10b6:510:224::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8534.42; Mon, 24 Mar
+ 2025 12:06:58 +0000
+Received: from SA2PEPF000015CC.namprd03.prod.outlook.com
+ (2603:10b6:a03:1a0:cafe::4e) by BY5PR16CA0026.outlook.office365.com
+ (2603:10b6:a03:1a0::39) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.38 via Frontend Transport; Mon,
+ 24 Mar 2025 12:06:58 +0000
+Authentication-Results: spf=pass (sender IP is 209.85.208.174)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;compauth=pass
+ reason=100
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 209.85.208.174 as permitted sender) receiver=protection.outlook.com;
+ client-ip=209.85.208.174; helo=mail-lj1-f174.google.com; pr=C
+Received: from mail-lj1-f174.google.com (209.85.208.174) by
+ SA2PEPF000015CC.mail.protection.outlook.com (10.167.241.202) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.8534.20
+ via Frontend Transport; Mon, 24 Mar 2025 12:06:58 +0000
+X-IncomingTopHeaderMarker: =?utf-8?q?OriginalChecksum=3A8A0081CAB1BDFFE8EDC5?=
+ =?utf-8?q?E345A856898509377FF61EBC442A5F5B9C7D2E7F301A=3BUpperCasedChecksum?=
+ =?utf-8?q?=3A6D662A321C5DB76C359FAC9FCC4B02938FB2BF37778BB62067A12E4C9864D6?=
+ =?utf-8?q?8F=3BSizeAsReceived=3A3024=3BCount=3A17?=
+Received: by mail-lj1-f174.google.com with SMTP id
+ 38308e7fff4ca-30613802a59so45517091fa.0        for
+ <yagnicvanam03@outlook.com>; Mon, 24 Mar 2025 05:06:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1742818017; x=1743422817; darn=outlook.com;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=QrP2XV8XTKtu9A5thv4q1pLm+Il+V47cHwE7pUopzBY=;
+        b=ZL5owI+Bfbp7K2hYSskcaa5SL3a6EKLbPqPd3w5A1dFaIr3a1N1wu/chhCWwp+qm6a
+         uTqB9CQ7UBuh506r7IsbTWi9y8sYDgC59fDX1yBbi8VOXGM0B/OFJ769Tev+bs3vLCph
+         NZEUlXwPE/aSkY4hgDqf9bqW4sOXNxyXot5jAuDTb5TSucO7MboiX6rTDZqkWaipT1aB
+         NJ14eJQoRO1dnGAdtwQ2nyVLHygafLr5TVmpLW3NZQjQYK2nuLsq1u24jdWWBt2R0xY3
+         Tpluz6PghDxibfXlRmZv5UFo5nftDoaWmpJBizIwtSVaJpzmoFNeblTGTxd8wip+9Q2J
+         0T+g==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1742818017; x=1743422817;
+        h=to:subject:message-id:date:from:in-reply-to:references:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=QrP2XV8XTKtu9A5thv4q1pLm+Il+V47cHwE7pUopzBY=;
+        b=kRK+bS+8QwWC73IyTYWaa01PT+xBFER4iYO6kBSWxrhDmvrnSxOtwlJW1zspw6CPXU
+         J5AuLPXspfKdDXGVWI1spbD2RLEjeG1+Ay4WgRl8+59wa7kOKBaHMb0iXHCh47MH9pxP
+         6syy0q3q92eV2vF5oPn+CIJNzxq/wyvwoL5C0bqamT9byHtUklx88GFjOiRTFrVMCeHz
+         EJ5o1/BU1ERBfapg38jMiifE334mdaFhs2CYqRHCSty6TZF/ra1wMFaxzWGwRv8okrfb
+         NMk1P1gXXhO79NXRDQjZxtPgOPmHog5CqyjJ6ClYG64wV70AgxArQP16B7+e8IxhSPTj
+         P4oA==
+X-Gm-Message-State: AOJu0YzlTcF8lXlamyHil6csoyE/t+xL+I112u/2/kTYklx54IJSTN2r
+	rThY5hK9tNISi8zgT25b4wuyFlIVMIiS4gjrpYS1w6SWLuXph0JQh12zSo18PeFiYwIJOZIvKIo
+	54QUgcLr5+ZdjikXZF/QGqDFMrDpttNrA
+X-Gm-Gg: ASbGnct4h3RtxEd9H+VDGxkwN9u8WD/z5tTnEszNU5SJbeBNnzyNteUdjQWGxkSAhJN
+	jP0jf6Ta/cWOE9qVhacm9NhPJGPqWM3AQgdLz9B18gs7cR92s7dtEwpcWc62ZK7HWg4UDh5NMqs
+	zxsHNYbE/LW96rX69ZGHSFzT3SwwU=
+X-Google-Smtp-Source: =?utf-8?q?AGHT+IFZ6kM8K+EmAejSD77KbiEHzt5IYKnnXDTlyiJ8?=
+ =?utf-8?q?SHfql9cK84CjvfcVjRUhs4JSlRjE0GcIQo9JcG7tynByslc=3D?=
+X-Received: by 2002:a05:651c:230a:b0:30c:12b8:fb9e with SMTP id
+ 38308e7fff4ca-30d7e2bba45mr44882181fa.37.1742818016500; Mon, 24 Mar 2025
+ 05:06:56 -0700 (PDT)
+References: =?utf-8?q?=3CBN8PR19MB28511E44F932E4BA7E255B74B1A42=40BN8PR19MB2?=
+ =?utf-8?q?851=2Enamprd19=2Eprod=2Eoutlook=2Ecom=3E?=
+In-Reply-To: =?utf-8?q?=3CBN8PR19MB28511E44F932E4BA7E255B74B1A42=40BN8PR19MB?=
+ =?utf-8?q?2851=2Enamprd19=2Eprod=2Eoutlook=2Ecom=3E?=
+From: client.services@globalinvestments.com
+Date: Mon, 24 Mar 2025 17:36:43 +0530
+X-Gm-Features: AQ5f1JowHwTJ5SJlVvyFtC-D6Itcg1OXqCxBFlSCaF6rohWCyqeXw-NbtPfGCDE
+Message-ID:
+ <CAAx3LMim2C-Nv3m2Cnf2C8D1qm7rCDin-bkUqB7AVg-f1prqJg@mail.gmail.com>
+Subject: Request for Timebound Outbound Payment Execution
+To: transactions@bigbank.com
+Content-Type: multipart/alternative; boundary="000000000000c8257f063115700a"
+X-IncomingHeaderCount: 17
+Return-Path: yagnic40@gmail.com
+X-MS-Exchange-Organization-ExpirationStartTime: 24 Mar 2025 12:06:58.1009
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ d75fe0f3-ad87-4143-c2e7-08dd6acc607a
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic:
+ SA2PEPF000015CC:EE_|PH8PR19MB7024:EE_|BN8PR19MB2851:EE_
+X-MS-Exchange-Organization-AuthSource:
+ SA2PEPF000015CC.namprd03.prod.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-UserLastLogonTime: 3/24/2025 12:04:53 PM
+X-MS-Office365-Filtering-Correlation-Id: d75fe0f3-ad87-4143-c2e7-08dd6acc607a
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 209.85.208.174
+X-SID-PRA: YAGNIC40@GMAIL.COM
+X-SID-Result: PASS
+X-MS-Exchange-Organization-SCL: 1
+X-Microsoft-Antispam: =?utf-8?q?BCL=3A0=3BARA=3A1444111002=7C461199028=7C472?=
+ =?utf-8?q?00799021=7C58200799018=7C2100799027=7C13020799006=7C9020799016=7C?=
+ =?utf-8?q?9400799030=7C20103052909095=7C1380799030=7C1370799030=7C136079903?=
+ =?utf-8?q?0=7C1602099012=7C440099028=7C4302099013=7C3412199025=3B?=
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 24 Mar 2025 12:06:58.0696
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id:
+ d75fe0f3-ad87-4143-c2e7-08dd6acc607a
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource:
+ SA2PEPF000015CC.namprd03.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg:
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PH8PR19MB7024
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:02.5561367
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.8534.033
+X-Microsoft-Antispam-Mailbox-Delivery: =?utf-8?b?dWNmOjA7am1yOjA7ZXg6MDth?=
+ =?utf-8?q?uth=3A1=3Bdest=3AI=3BOFR=3ASpamFilterPass=3BENG=3A=285062000308?=
+ =?utf-8?q?=29=28920221119095=29=2890000117=29=28920221120095=29=2890013020?=
+ =?utf-8?b?KSg5MTAyNTAyMCkoOTEwNDAwOTUpKDkwNTAwMjApKDkwNjUwMjQpKDkxMDAzNDEp?=
+ =?utf-8?b?KDEwMTAwNTApKDk0NDUwMDEzMikoNDgxMDAxMCkoNDkxMDAzMykoOTkyMDAwNiko?=
+ =?utf-8?b?OTUxMDAwNikoMTAxMDUwMjEpKDkzMjAwMDUpKDkyMzAwMzgpKDEyMDAwMSk7?=
+X-Message-Delivery: Vj0xLjE7dXM9MDtsPTA7YT0wO0Q9MTtHRD0xO1NDTD0tMQ==
+X-Microsoft-Antispam-Message-Info:
+ EoGQe8YFUbmS+MChKL9SWU0EvoC5g4+D/GRC4IHzdD85M=?utf-8?q?4KcZ10R8WnQaY1O9eijg?=
+ =?utf-8?q?5ITU6dbEYAKRUcXuSjyQ6dkVf0nRyZuTWoWAE/7cRzNfqQnf7SJv6FcSpwI9Yklmi?=
+ =?utf-8?q?H7payJPyCODpJl7q8fYfykd2eTyVcOGO9nso9vBcLarIHZu/pXgn4NjMcL1V7aqmz?=
+ =?utf-8?q?C6kHvDPWIwHos6Iu6dOhMQkTDKz1Z8uTm3ZgBaSsrx07yjqou6m9o73vGtKrP0U0t?=
+ =?utf-8?q?0iJ7ONEoyLZVvqYwYA+VYWRWDC72C3gQ9kXtttQyTMxHyC1vbHi428BfOFH2gGznx?=
+ =?utf-8?q?JZpKB+2gPneplsGMQWbKP7dpWbU4wyKL0rMOg9A4IV6zaZk4fd7rIENLxjyvPGwv3?=
+ =?utf-8?q?DdHa+I+a6Y6H5zmtLXa7zzOOIyy0ipFinZ8XeaSIGidrkALdMxPnPG75LxAYzd4pw?=
+ =?utf-8?q?y1OVOG+1XAxOFjAJpxh7HhCgErMkCOcmQbT4ClRPkDt17IetYntIpICVKdYe/JkeZ?=
+ =?utf-8?q?q+znewKmKIyUBaZpNsHwKvfgikW9BVznrGEJ22CCmGTArphdc7xnWN+ZTzxXtMQi3?=
+ =?utf-8?q?ZzrL6IHd2YfM47fIQE7d5wV/gCpvUniORNqoSaYJVEgOfHEPCeWsPj7XoCmiGtGyj?=
+ =?utf-8?q?OUylKDmaC5ex5zoHNR1mGAfkJLdREanx76sJ/y3PjnwWnEqxr3x68piIg+/6elNqr?=
+ =?utf-8?q?SOe9uqVFLOelFNnUx5wH3AmJbIuemR08+Xi+58Jh0js3P4OUEQVc00fK1BwBXeVhU?=
+ =?utf-8?q?Tbe/RU8qnxiOE3BaZFhbKn2fs8QdJCcW25QqYaaud27WkHAJAqT1qQP/fNA0p1OuK?=
+ =?utf-8?q?CLky0ewSPOCjuurUyFfXOqbmDBBlvZ9M1bQxng9mvz1KuyXlT9hROOxt4LyIUucKQ?=
+ =?utf-8?q?j4nfmABxZb+KoVjrAFDk6BFD5tVVULkFrBSLY0Er+KfeqA8K6e5k4mxAdwQtxpYDM?=
+ =?utf-8?q?TogIM/fDyxc3gGvmB5KwbAPr8q2oyCzaz9G86vmkvg4BPDakj75Ps8A21A7GLjtvH?=
+ =?utf-8?q?qhBsfVb0hhfJ/cOCLtWy5miBBfqTkqjUpLv+ULZDeGeNwWW4lEGMhokFE223W861J?=
+ =?utf-8?q?+ljS6REHWz+TagSl9/BHr5efIYg0yTF7S83NOqUdJCG6NLSK5oKyoMOYDw7+D4qrx?=
+ =?utf-8?q?254xl8ia8TJmJD+KzP6hCaW877EP4iueTT4juGNBhEf4evkIGz/yUcDjgqOZE9B8e?=
+ =?utf-8?q?OdqJdc6yMApK2Si+catLA1/0Cjr3q4QrH6dW6R0ioUQLQ/jnI0ioRkQidgmMDYDdQ?=
+ =?utf-8?q?5WMMx9LaQf7cH3f8owpQBTcC+gKvouVwLTkpZkVrCb5ZagaK4c9LivglEKQWVCLzH?=
+ =?utf-8?q?O2C4rUIqO0KX1A4CGZG7vFg03kK/YPzDzVFNmzut3YB+DJG8vJDDI5Q/kOON88fYA?=
+ =?utf-8?q?mjhpesQif5yuKV0axMas3i0oC8jQlDROIqnRlhD7qteFuqa9FHpi7JAwApE1BHEoR?=
+ =?utf-8?q?sIc8lpggjuMu2TLxuX+rBPgs0lZa7DTTD3xHEtdnq/O5T3YZgijqP88MkQx7Y7sn+?=
+ =?utf-8?q?PEp6AI0g2JOC8ECa+i4e+qRnGwyQj174XMG0mnNdYKKMheYKuM3lPHbSK3e0RIE3B?=
+ =?utf-8?q?/p5XGCZCnBK121r30c2M3Yi+5JS5vGXIhcvh+W6EONK1nap/VwqmJKe+p9O1yMywG?=
+ =?utf-8?q?3trxcSikp+r4jEOUhYAruV1Q94QYG1SwOR5G1bzyUpPl9XY7/+ba1tJteb0DADuPp?=
+ =?utf-8?q?tsUMMrb0+xeWh6QzCHst+D6hcTL1KQ3bRKH1LvtPcFIVYgxg4vx+0mioZhrOP8qGu?=
+ =?utf-8?q?n9CSTlBmSCA4UP7GW3SJuyvEkjq8iBoPDDK8Ka34CLfyI0N0qPITYQDLqJzF1jn6i?=
+ =?utf-8?q?2N7eTwl3cpP8RWEcKuzrwmXP7/XAlDjJ6A9msx7M+ZvyCqK3RFVPguK6RjZ2G9FLC?=
+ =?utf-8?q?9NUWHdlJjk0fZcAXgKHCGDQJiO7DbY5V4deXTu5SpPhrVbzLMK9gWdYGG9JvNr0fj?=
+ =?utf-8?q?MQIjuznYs5KBBJc9h+HfdBRtzTUnDVSa+jHPSlWqczF349KqsYZTmSjCpOqt3AXjk?=
+ =?utf-8?q?Xf5DvgTIJq6+jUeD+xx9Zi29rgvfuvJHozZqucojEI89E3Iy5X4H1MoZNbrU/ezTS?=
+ =?utf-8?q?xfcIiMDoUjP7Zt9?=tDhCD4hRQNREOtrJ
+MIME-Version: 1.0
+
+--000000000000c8257f063115700a
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Dear Team,
+
+I hope this message finds you well. We would like to initiate an outbound fun=
+ds transfer that is subject to a strict timeline.
+
+**Details of the request are as follows:**
+- **Amount**: USD 2,500,000
+- **Beneficiary Name**: Horizon Equipment Inc.
+- **Beneficiary Bank**: Central Capital Bank
+- **Account Number**: 778834991
+- **Swift Code**: CCBLUS33
+- **Requested Execution Date**: March 28, 2025
+
+Kindly ensure the transaction is processed no later than the date mentioned a=
+bove. Please confirm once the payment is initiated and advise if any further =
+documentation is required to proceed.
+
+Appreciate your prompt attention to this matter.
+
+Best regards, =20
+Samantha Lee =20
+Senior Finance Manager =20
+Global Investments LLC
+
+--000000000000c8257f063115700a
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<html><body><p>Dear Team,<br><br>I hope this message finds you well. We would=
+ like to initiate an outbound funds transfer that is subject to a strict time=
+line.<br><br>**Details of the request are as follows:**<br>- **Amount**: USD =
+2,500,000<br>- **Beneficiary Name**: Horizon Equipment Inc.<br>- **Beneficiar=
+y Bank**: Central Capital Bank<br>- **Account Number**: 778834991<br>- **Swif=
+t Code**: CCBLUS33<br>- **Requested Execution Date**: March 28, 2025<br><br>K=
+indly ensure the transaction is processed no later than the date mentioned ab=
+ove. Please confirm once the payment is initiated and advise if any further d=
+ocumentation is required to proceed.<br><br>Appreciate your prompt attention =
+to this matter.<br><br>Best regards,  <br>Samantha Lee  <br>Senior Finance Ma=
+nager  <br>Global Investments LLC</p></body></html>
+
+--000000000000c8257f063115700a--
