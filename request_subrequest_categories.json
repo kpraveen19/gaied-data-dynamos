@@ -1,0 +1,93 @@
+ {
+    "Adjustment": {
+      "General Adjustment": "For modifications in payment terms or amounts.",
+      "subrequest": {
+        "Rate Correction Adjustment": "Adjustments targeting specific rate errors.",
+        "Data Correction": "Fixes for data entry mistakes."
+      }
+    },
+    "AU Transfer": {
+      "Standard AU Transfer": "Routine authorized transfers.",
+      "subrequest": {
+        "Intra-AU Reallocation": "Reassigning funds within segments under the same authorization.",
+        "Cross-Entity Transfer": "Transfers between subsidiaries/legal entities within the same group.",
+        "Split Transfer Request": "Single transfer split among multiple destination accounts."
+      }
+    },
+    "Closing Notice": {
+      "subrequest": {
+        "Reallocation Fees": "",
+        "Reallocation Principal": "",
+        "Amendment Fees": "",
+        "Partial Settlement Notice": "For partial settlements requiring separate tracking.",
+        "Overpayment Notification": "To handle overpayments distinctly.",
+        "Early Closure Notification": "Facility closed before scheduled date.",
+        "Deferred or Delayed Closure": "Postponed closure due to issues.",
+        "Document Submission Requirement": "Closure pending due to missing documentation."
+      }
+    },
+    "Commitment Change": {
+      "subrequest": {
+        "Cashless Roll": "",
+        "Decrease": "",
+        "Increase": "",
+        "Drawdown Revision": "Adjustments to scheduled drawdown amounts.",
+        "Borrowing Base Recalculation": "Triggered by changes in collateral value.",
+        "Commitment Reaffirmation": "Reaffirming existing commitment without altering financials.",
+        "Term Extension": "Extending the facility term.",
+        "Covenant Update": "Changes in covenants like financial ratios."
+      }
+    },
+    "Fee Payment": {
+      "subrequest": {
+        "Ongoing Fee": "",
+        "Letter of Credit Fee": "",
+        "Retroactive Fee Correction": "Adjusting fees from previous periods.",
+        "Fee Allocation Across Accounts": "Splitting fees across accounts.",
+        "Fee Waiver Request": "Request to waive fees.",
+        "Fee Reversal": "Reversing erroneously charged fees."
+      }
+    },
+    "Money Movement Inbound": {
+      "subrequest": {
+        "Principal": "",
+        "Interest": "",
+        "Principal + Interest": "",
+        "Principal + Interest + Fee": "",
+        "Consolidated Payment Notification": "Aggregating multiple incoming payments.",
+        "Segregated or Partitioned Payment": "Earmarking received funds for different purposes.",
+        "Currency Conversion Inbound": "Inbound payment received in foreign currency.",
+        "Escrow Payment": "Funds directed into escrow.",
+        "Partial Payment": "Portion of expected payment received."
+      }
+    },
+    "Money Movement Outbound": {
+      "subrequest": {
+        "Timebound": "",
+        "Foreign Currency": "",
+        "Failed Transfer Resolution": "Corrective action for failed outbound transfers.",
+        "Reversal and Reissue": "Reversing and correctly reissuing outbound payments.",
+        "Scheduled Outbound Payment Notification": "Future-dated outbound payment setup.",
+        "Automated Reversal": "Automated error-triggered reversal process.",
+        "Fee Refund": "Returning fees as part of outbound transaction."
+      }
+    },
+    "Additional Process/Operational Exceptions": {
+      "subrequest": {
+        "System-Generated Error Correction": "Correcting system-generated errors.",
+        "Manual Intervention Alert": "Request for manual review due to unexpected data."
+      }
+    },
+    "Collateral Management": {
+      "subrequest": {
+        "Collateral Revaluation Request": "Request for updated or additional collateral.",
+        "Collateral Deficiency Notification": "Insufficient collateral notification."
+      }
+    },
+    "Documentation & Compliance": {
+      "subrequest": {
+        "Missing Documentation Follow-up": "Follow-up for unreceived documentation.",
+        "Digital Signature Verification Issue": "Invalid digital signature flag."
+      }
+    }
+  }
